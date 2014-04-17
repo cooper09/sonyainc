@@ -260,7 +260,6 @@ controllers.controller('AppCtrl', function ($scope, $http) {
       //$http.jsonp('http://zyadsherif.com/?p=326&json=1&callback=JSON_CALLBACK').then(function (data) {
       $http.jsonp('http://sonyainc.net/json/get_UI_data.php?json=1&callback=JSON_CALLBACK').then(function (data) {
       // body...
-      alert("WoW!!! " + data.data.clients );
       $scope.title = data.data.clients.title;
       $scope.client = data.data.clients.client;
       $scope.date = data.data.clients.date;
@@ -301,6 +300,9 @@ controllers.controller('AppCtrl', function ($scope, $http) {
     })
   }
 
+  $scope.clickMe = function() {
+    alert("Click ME, Dammit!!!");
+  }
 });
  
 
