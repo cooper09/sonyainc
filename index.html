@@ -176,7 +176,20 @@
 			</div>
 			<div class="columns large-9 small-12">
 				<p> New stuff goes here...</p>
-				
+				  <div ng-controller="DataCtrl">
+
+				        <p>Total Todos: {{total}}<p>
+
+				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
+				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
+				        </li>
+				      <br/>
+				      <span><h3>New Task: </h3></span><input type="text" ng-model='newTask' class="input"><br/>
+				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
+				      <br>
+				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				   </div><!-- end DataCtrl -->
+								
 			</div>
 		</div>
 	</div>
