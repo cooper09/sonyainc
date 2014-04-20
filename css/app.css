@@ -1696,7 +1696,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #0ca7d3;
+  color: red; /*#0ca7d3; */
   text-decoration: none;
   line-height: inherit;
 }

@@ -231,9 +231,9 @@ controllers.controller('DataCtrl', function ($scope, $http) {
 
       }
 
-}//end DataCtrl controller 
+});//end DataCtrl controller 
 
-
+//});
 
 
 
