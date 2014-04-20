@@ -10254,43 +10254,6 @@ h2.tab-title {
 #about {
   background-color: #044c62;
 }
-#about .gauges-grid {
-  margin-top: 40px;
-}
-#about .gauges-grid .small-gauge {
-  width: 145px;
-  height: 120px;
-  float: none;
-  margin: 0 auto;
-}
-#about .quote-wrapper {
-  background-color: #80A8CC;
-}
-#about .quote {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-#about .quote i {
-  font-size: 6em;
-  color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  top: 0px;
-  left: -50px;
-  z-index: 1;
-}
-#about .quote h3 {
-  font-size: 1.2em;
-  letter-spacing: 1px;
-  color: #fff;
-  z-index: 3;
-}
-#about .quote h4 {
-  font-size: 2em;
-  color: #fff;
-  z-index: 4;
-}
 
 #contact {
   padding: 40px 0;
