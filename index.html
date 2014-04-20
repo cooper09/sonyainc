@@ -36,18 +36,11 @@
 
 
 <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.13 - http://yoast.com/wordpress/seo/ -->
-<meta name="description" content="Portfolio of Zyad Sherif, enthusiastic web designer, front-end developer and Wordpress theme developer. Passionate for the web&#039;s latest technologies"/>
-<link rel="canonical" href="http://zyadsherif.com/" />
-<meta property='og:locale' content='en_US'/>
-<meta property='og:type' content='article'/>
-<meta property='og:title' content='Home |'/>
-<meta property='og:description' content='Portfolio of Zyad Sherif, enthusiastic web designer, front-end developer and Wordpress theme developer. Passionate for the web&#039;s latest technologies'/>
-<meta property='og:url' content='http://zyadsherif.com/'/>
-<meta property='og:site_name' content='Zyad Sherif - Front-end Engineer &amp; Wordpress theme developer'/>
+
 <!-- / Yoast WordPress SEO plugin. -->
 
-<link rel="alternate" type="application/rss+xml" title="Zyad Sherif - Front-end Engineer &amp; Wordpress theme developer &raquo; Feed" href="http://zyadsherif.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Zyad Sherif - Front-end Engineer &amp; Wordpress theme developer &raquo; Comments Feed" href="http://zyadsherif.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TEST/" />
+<link rel="alternate" type="application/rss+xml" title="TEST" href="http://zyadsherif.com/comments/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Zyad Sherif - Front-end Engineer &amp; Wordpress theme developer &raquo; Home Comments Feed" href="http://zyadsherif.com/home/feed/" />
 <link rel='stylesheet' id='jetpack-widgets-css'  href='http://zyadsherif.com/wp-content/plugins/jetpack/modules/widgets/widgets.css' type='text/css' media='all' />
 <link rel='stylesheet' id='reverie-stylesheet-css'  href='http://zyadsherif.com/wp-content/themes/zyadsherif/css/style.css' type='text/css' media='all' />
@@ -56,10 +49,10 @@
 <link rel='stylesheet' id='reverie-ie-only-css'  href='http://zyadsherif.com/wp-content/themes/zyadsherif/css/ie.css' type='text/css' media='all' />
 <![endif]-->
 <link rel='stylesheet' id='sharedaddy-css'  href='http://zyadsherif.com/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css' type='text/css' media='all' />
-<script type='text/javascript' src='http://zyadsherif.com/wp-includes/js/jquery/jquery.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-includes/js/jquery/jquery-migrate.min.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-includes/js/comment-reply.min.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/themes/zyadsherif/js/vendor/custom.modernizr.js'></script>
+<script type='text/javascript' src='js/jquery/jquery.js'></script>
+<script type='text/javascript' src='js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='js/comment-reply.min.js'></script>
+<script type='text/javascript' src='js/custom.modernizr.js'></script>
 <link rel='shortlink' href='http://wp.me/P247JY-9' />
 <style type='text/css'>img#wpstats{display:none}</style>
 </head>
@@ -157,24 +150,28 @@
 						<h4>Soccer Street</h4>
 											</li>
 									</ul>		
-			</div>
-		</div>
+			</div><!-- end large-12 small-12 columns  -->
+		</div><!-- end row -->
 		
-	</div>
+	</div><!-- end id work -->
 
 	<div id="personal" >
 		<div class="row quote-wrapper">
 			<div class="quote large-8 columns large-centered small-10 small-centered">
 				<i class="icomoon-quotes-left"></i>
 				<h3>Single page apps &amp; responsive websites are the superpowers of the web</h3>
-				<h4>- Zyad Sherif</h5>
 			</div>
 		</div>
 		<div class="row">
 			<div class="large-3 small-12 columns">
 				<h2 class="tab-title">Personal Stuff</h2>
 			</div>
-			<div class="columns large-9 small-12">
+			<style>
+				.add-padding {
+					padding: 2em;
+				}
+			</style>
+			<div class="columns large-9 small-12 add-padding" >
 				<p> New stuff goes here...</p>
 				  <div ng-controller="DataCtrl">
 
@@ -184,7 +181,13 @@
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <br/>
-				      <span><h3>New Task: </h3></span><input type="text" ng-model='newTask' class="input"><br/>
+				      <style>
+				      	.zap a {
+				      		margin-left: 2em;
+				      		background: yellow;
+				      	}
+				      </style>
+				      <span><h3>New Task 2: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
 				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
 				      <br>
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
@@ -198,7 +201,7 @@
 		<div class="row">
 			<div id="respond" class="large-8 large-centered small-11 small-centered columns">
 		        <h2>Request a quote <br>or <br><span class="subheader">just send some love</span></h2>
-		        <form id="contactForm" action="http://zyadsherif.com/wp-content/themes/zyadsherif/send_mail.php" method="post">
+		        <form id="contactForm" action="" method="post">
 		          <div class="row">
 		          <div class="columns large-12 small-12 alert-container">
 		          	
@@ -236,7 +239,6 @@
 					<li class="instagram"><a href="http://github.com/zyadsherif"><i class="icomoon-github-5" target="_blank"></i></a></li>
 				</ul>
 			<div class="columns large-4 small-12"><p>Built with <a href="http://foundation.zurb.com" target="_blank">Foundation</a> by <a href="http://zurb.com" target="_blank">Zurb</a></p></div>
-			<div class="columns large-4 small-12"><p>All rights reserved <a href="http://zyadsherif.com" target="_blank">Zyad Sherif</a> &copy;2013</p></div>
 			<div class="columns large-4 small-12"><p>
 				<a href="http://www.w3.org/html/logo/" class="html5-logo">
 				<img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-semantics.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Semantics">
@@ -256,12 +258,12 @@
 var WPGroHo = {"my_hash":""};
 /* ]]> */
 </script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/plugins/jetpack/modules/wpgroho.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/themes/zyadsherif/js/foundation.min.js'></script>
+<script type='text/javascript' src='js/wpgroho.js'></script>
+<script type='text/javascript' src='js/foundation.min.js'></script>
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/themes/zyadsherif/js/waypoints.min.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/themes/zyadsherif/js/raphael.2.1.0.min.js'></script>
-<script type='text/javascript' src='http://zyadsherif.com/wp-content/themes/zyadsherif/js/justgage.1.0.1.min.js'></script>
+<script type='text/javascript' src='js/waypoints.min.js'></script>
+<script type='text/javascript' src='js/raphael.2.1.0.min.js'></script>
+<script type='text/javascript' src='js/justgage.1.0.1.min.js'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var myAjax = {"ajaxurl":"http:\/\/zyadsherif.com\/wp-admin\/admin-ajax.php"};
@@ -269,13 +271,7 @@ var myAjax = {"ajaxurl":"http:\/\/zyadsherif.com\/wp-admin\/admin-ajax.php"};
 </script>
 <script type='text/javascript' src='js/app.js'></script>
 
-	<script src="http://stats.wordpress.com/e-201414.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	st_go({v:'ext',j:'1:2.3.5',blog:'30535742',post:'9',tz:'2'});
-	var load_cmc = function(){linktracker_init(30535742,9,2);};
-	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
-	else load_cmc();
-	</script>
+	
 <script>
 	(function($) {
 		$(document).foundation();
