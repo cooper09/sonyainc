@@ -55,6 +55,20 @@
 <script type='text/javascript' src='js/custom.modernizr.js'></script>
 <link rel='shortlink' href='http://wp.me/P247JY-9' />
 <style type='text/css'>img#wpstats{display:none}</style>
+<style>
+	.add-padding {
+		padding: 2em;
+	}
+	.red {
+		background: red;
+	}
+	.green {
+		background: green;
+	}
+	.blue {
+		background: blue;
+	}
+</style>
 </head>
 
 <body class="home page page-id-9 page-template page-template-frontpage-php loading" ng-controller="AppCtrl" >
@@ -85,12 +99,22 @@
 			</div>
 		</div>
 	</div>
-	TEST
+			<div class="row quote-wrapper">
+			<div class="quote large-8 columns large-centered small-10 small-centered">
+			
+				<h3>Single page apps &amp; responsive websites are the superpowers of the web</h3>
+				<i class="icomoon-quotes-right"></i>
+			</div>
+		</div><!-- end quote wrapper -->
 </div>
 	<div id="work" class="step">
 		<div class="row">
-			<div class="large-12 small-12 columns">
+			<div class="large-3 small-12 columns red">
+				<h2 class="tab-title red">Work Stuff</h2>
+			</div>
+
 				<div class="columns large-9 small-12 add-padding" >
+
 				<p> New stuff goes here...</p>
 				  <div ng-controller="DataCtrl">
 
@@ -113,27 +137,17 @@
 				   </div><!-- end DataCtrl -->
 								
 					
-			</div><!-- end large-12 small-12 columns  -->
+
 		</div><!-- end row -->
 		
 	</div><!-- end id work -->
 
 	<div id="personal" >
-		<div class="row quote-wrapper">
-			<div class="quote large-8 columns large-centered small-10 small-centered">
-				<i class="icomoon-quotes-left"></i>
-				<h3>Single page apps &amp; responsive websites are the superpowers of the web</h3>
-			</div>
-		</div>
 		<div class="row">
-			<div class="large-3 small-12 columns">
+			<div class="large-3 small-12 columns green">
 				<h2 class="tab-title">Personal Stuff</h2>
 			</div>
-			<style>
-				.add-padding {
-					padding: 2em;
-				}
-			</style>
+			
 			<div class="columns large-9 small-12 add-padding" >
 				<p> New stuff goes here...</p>
 				  <div ng-controller="DataCtrl">
@@ -156,14 +170,16 @@
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 								
-			</div>
-		</div>
-	</div>
+			</div><!-- end columns -->
+		</div><!-- end row -->
+	</div><!-- end id personal -->
 
 	<div id="groceries" >
 		<div class="row">
-			<h2 class="tab-title">Grocery</h2>
-
+			<div class="large-3 small-12 columns blue">
+				<h2 class="tab-title">Food Stuff</h2>
+			</div><!-- end stuff stuff -->
+			<div class="columns large-9 small-12 add-padding" >
 			 <div ng-controller="DataCtrl">
 
 				        <p>Total Todos: {{total}}<p>
@@ -183,8 +199,9 @@
 				      <br>
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
-								
-	</div>
+				</div> <!-- end columns -->
+			</div><!-- end row -->						
+		</div><!-- end row -->
 		
 <div id="footer">
 		<div class="row">
