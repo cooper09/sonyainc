@@ -1696,7 +1696,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: red; /*#0ca7d3; */
+  color: *#0ca7d3; 
   text-decoration: none;
   line-height: inherit;
 }
@@ -10049,7 +10049,7 @@ body {
   font-weight: 100;
   float: left;
   margin: 10px;
-  background-color: red; //#044c62;
+  background-color: #044c62;
   color: #fff;
   text-shadow: #033747 1px 1px, #033747 2px 2px, #033747 3px 3px, #033747 4px 4px, #033747 5px 5px, #033747 6px 6px, #033748 7px 7px, #033848 8px 8px, #033848 9px 9px, #033848 10px 10px, #033848 11px 11px, #033848 12px 12px, #033849 13px 13px, #033849 14px 14px, #033849 15px 15px, #033949 16px 16px, #033949 17px 17px, #033949 18px 18px, #03394a 19px 19px, #03394a 20px 20px, #03394a 21px 21px, #03394a 22px 22px, #03394a 23px 23px, #033a4a 24px 24px, #033a4b 25px 25px, #033a4b 26px 26px, #033a4b 27px 27px, #033a4b 28px 28px, #033a4b 29px 29px, #033a4b 30px 30px, #033a4c 31px 31px, #033b4c 32px 32px, #033b4c 33px 33px, #033b4c 34px 34px, #033b4c 35px 35px, #033b4c 36px 36px, #033b4c 37px 37px, #033b4d 38px 38px, #033b4d 39px 39px, #033c4d 40px 40px, #033c4d 41px 41px, #033c4d 42px 42px, #033c4d 43px 43px, #033c4e 44px 44px, #033c4e 45px 45px, #033c4e 46px 46px, #033c4e 47px 47px, #033d4e 48px 48px, #033d4e 49px 49px, #033d4f 50px 50px, #033d4f 51px 51px, #033d4f 52px 52px, #033d4f 53px 53px, #033d4f 54px 54px, #033d4f 55px 55px, #033e50 56px 56px, #033e50 57px 57px, #033e50 58px 58px, #033e50 59px 59px, #033e50 60px 60px, #033e50 61px 61px, #033e51 62px 62px, #033e51 63px 63px, #033f51 64px 64px, #033f51 65px 65px, #033f51 66px 66px, #033f51 67px 67px, #033f51 68px 68px, #033f52 69px 69px, #033f52 70px 70px, #033f52 71px 71px, #034052 72px 72px, #034052 73px 73px, #034052 74px 74px, #034053 75px 75px, #034053 76px 76px, #034053 77px 77px, #034053 78px 78px, #034053 79px 79px, #034153 80px 80px, #034154 81px 81px, #034154 82px 82px, #034154 83px 83px, #034154 84px 84px, #034154 85px 85px, #034154 86px 86px, #034155 87px 87px, #034255 88px 88px, #034255 89px 89px, #034255 90px 90px, #034255 91px 91px, #034255 92px 92px, #034256 93px 93px, #034256 94px 94px, #034256 95px 95px, #034356 96px 96px, #034356 97px 97px, #034356 98px 98px, #034357 99px 99px, #034357 100px 100px, #034357 101px 101px, #034357 102px 102px, #034357 103px 103px, #034457 104px 104px, #034457 105px 105px, #034458 106px 106px, #034458 107px 107px, #034458 108px 108px, #034458 109px 109px, #034458 110px 110px, #034458 111px 111px, #034559 112px 112px, #034559 113px 113px, #034559 114px 114px, #034559 115px 115px, #034559 116px 116px, #034559 117px 117px, #03455a 118px 118px, #03455a 119px 119px, #03465a 120px 120px, #03465a 121px 121px, #03465a 122px 122px, #03465a 123px 123px, #03465b 124px 124px, #03465b 125px 125px, #03465b 126px 126px, #03465b 127px 127px, #03475b 128px 128px, #03475b 129px 129px, #03475c 130px 130px, #03475c 131px 131px, #03475c 132px 132px, #03475c 133px 133px, #03475c 134px 134px, #03475c 135px 135px, #03485c 136px 136px, #03485d 137px 137px, #03485d 138px 138px, #03485d 139px 139px, #03485d 140px 140px, #03485d 141px 141px, #03485d 142px 142px, #03485e 143px 143px, #03495e 144px 144px, #03495e 145px 145px, #03495e 146px 146px, #03495e 147px 147px, #03495e 148px 148px, #03495f 149px 149px, #03495f 150px 150px, #03495f 151px 151px, #034a5f 152px 152px, #034a5f 153px 153px, #034a5f 154px 154px, #034a60 155px 155px, #034a60 156px 156px, #034a60 157px 157px, #034a60 158px 158px, #034a60 159px 159px, #034b60 160px 160px, #034b61 161px 161px, #034b61 162px 162px, #034b61 163px 163px, #034b61 164px 164px, #034b61 165px 165px, #034b61 166px 166px, #044c62 167px 167px;
   box-shadow: none;
@@ -10154,7 +10154,7 @@ body {
 
 h2.tab-title {
   height: 100px;
-  background-color: #fff;
+  color: #fff; 
   text-align: center;
   line-height: 100px;
   margin: 0;

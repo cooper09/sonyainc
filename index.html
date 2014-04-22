@@ -59,14 +59,42 @@
 	.add-padding {
 		padding: 2em;
 	}
-	.red {
-		background: red;
+	.orange {
+		background: #e34f26;
+		color: #fff;
 	}
-	.green {
-		background: green;
+	.light-blue {
+		background: #0ca7d3;
+		color: #fff;
 	}
 	.blue {
-		background: blue;
+		background: #0868ac;
+		color: #fff;
+	}
+	.hideme {
+		display:none;
+	}
+	.showme {
+		display: block;
+	}
+
+	.work {
+		cursor: pointer;
+	}
+	.personal {
+		cursor: pointer;
+	}
+	.groceries {
+		cursor: pointer;
+	}
+	.cover1 {
+		display: none;
+	}
+	.cover2 {
+		display: none;
+	}
+	.cover3 {
+		display: none;
 	}
 </style>
 </head>
@@ -103,20 +131,17 @@
 			<div class="quote large-8 columns large-centered small-10 small-centered">
 			
 				<h3>Single page apps &amp; responsive websites are the superpowers of the web</h3>
-				<i class="icomoon-quotes-right"></i>
 			</div>
 		</div><!-- end quote wrapper -->
 </div>
 	<div id="work" class="step">
 		<div class="row">
-			<div class="large-3 small-12 columns red">
-				<h2 class="tab-title red">Work Stuff</h2>
+			<div class="large-3 small-12 columns blue work">
+				<h2 class="tab-title">Work Stuff</h2>
 			</div>
 
 				<div class="columns large-9 small-12 add-padding" >
-
-				<p> New stuff goes here...</p>
-				  <div ng-controller="DataCtrl">
+				  <div ng-controller="DataCtrl" class="cover1">
 
 				        <p>Total Todos: {{total}}<p>
 
@@ -124,13 +149,7 @@
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <br/>
-				      <style>
-				      	.zap a {
-				      		margin-left: 2em;
-				      		background: yellow;
-				      	}
-				      </style>
-				      <span><h3>New Task 2: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
+				      <span><h3>New Task - Work </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
 				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
 				      <br>
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
@@ -144,13 +163,12 @@
 
 	<div id="personal" >
 		<div class="row">
-			<div class="large-3 small-12 columns green">
-				<h2 class="tab-title">Personal Stuff</h2>
+			<div class="large-3 small-12 columns orange personal">
+				<h2 class="tab-title">My Stuff</h2>
 			</div>
 			
 			<div class="columns large-9 small-12 add-padding" >
-				<p> New stuff goes here...</p>
-				  <div ng-controller="DataCtrl">
+				  <div ng-controller="DataCtrl"  class="cover2">
 
 				        <p>Total Todos: {{total}}<p>
 
@@ -158,13 +176,8 @@
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <br/>
-				      <style>
-				      	.zap a {
-				      		margin-left: 2em;
-				      		background: yellow;
-				      	}
-				      </style>
-				      <span><h3>New Task 2: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
+				    
+				      <span><h3>New Task - Personal: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
 				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
 				      <br>
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
@@ -176,11 +189,11 @@
 
 	<div id="groceries" >
 		<div class="row">
-			<div class="large-3 small-12 columns blue">
+			<div class="large-3 small-12 columns light-blue groceries">
 				<h2 class="tab-title">Food Stuff</h2>
 			</div><!-- end stuff stuff -->
 			<div class="columns large-9 small-12 add-padding" >
-			 <div ng-controller="DataCtrl">
+			 <div ng-controller="DataCtrl"  class="cover3">
 
 				        <p>Total Todos: {{total}}<p>
 
@@ -194,7 +207,7 @@
 				      		background: yellow;
 				      	}
 				      </style>
-				      <span><h3>New Task 2: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
+				      <span><h3>New Task - Groceries: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
 				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
 				      <br>
 				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
@@ -207,11 +220,11 @@
 		<div class="row">
 			<div class="large-8 large-centered small-12 columns">
 				<ul id="social-links" class="large-block-grid-5 small-block-grid-5">
-					<li class="facebook"><a href="http://facebook.com/zyadao12" target="_blank"><i class="icomoon-facebook"></i></a></li>
-					<li class="twitter"><a href="http://twitter.com/zyadsherif" target="_blank"><i class="icomoon-twitter"></i></a></li>
-					<li class="linkedin"><a href="http://www.linkedin.com/profile/view?id=66307904&trk=tab_pro" target="_blank"><i class="icomoon-linkedin"></i></a></li>
-					<li class="google"><a href="https://plus.google.com/102338544793445636990/posts?partnerid=gplp0&tab=XX&authuser=0" target="_blank"><i class="icomoon-google-plus"></i></a></li>
-					<li class="instagram"><a href="http://github.com/zyadsherif"><i class="icomoon-github-5" target="_blank"></i></a></li>
+					<li class="facebook"><a href="" target="_blank"><i class="icomoon-facebook"></i></a></li>
+					<li class="twitter"><a href="" target="_blank"><i class="icomoon-twitter"></i></a></li>
+					<li class="linkedin"><a href="http://www.linkedin.com/profile/" target="_blank"><i class="icomoon-linkedin"></i></a></li>
+					<li class="google"><a href="" target="_blank"><i class="icomoon-google-plus"></i></a></li>
+					<li class="instagram"><a href="http://github.com/cooper09"><i class="icomoon-github-5" target="_blank"></i></a></li>
 				</ul>
 			<div class="columns large-4 small-12"><p>Built with <a href="http://foundation.zurb.com" target="_blank">Foundation</a> by <a href="http://zurb.com" target="_blank">Zurb</a></p></div>
 			<div class="columns large-4 small-12"><p>
@@ -250,8 +263,21 @@ var myAjax = {"ajaxurl":"http:\/\/zyadsherif.com\/wp-admin\/admin-ajax.php"};
 <script>
 	(function($) {
 		$(document).foundation();
+		
+		$( ".work" ).click(function() {
+		  $('.cover1').toggle('slow');
+		});
+		$( ".personal" ).click(function() {
+		  $('.cover2').toggle('slow');
+		});
+		$( ".groceries" ).click(function() {
+		  $('.cover3').toggle('slow');
+		});
+
+
 	})(jQuery);
-</script>
+
 	
+</script>	
 </body>
 </html>
