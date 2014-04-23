@@ -96,6 +96,13 @@
 	.cover3 {
 		display: none;
 	}
+	.zap {
+		border: 1px solid #ccc;
+		background: red;
+	}
+	#addbtn {
+		margin-right: 1em;
+	}
 </style>
 </head>
 
@@ -148,11 +155,9 @@
 				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
-				      <br/>
+
 				      <span><h3>New Task - Work </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
-				      <br>
-				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 								
 					
@@ -175,12 +180,8 @@
 				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
-				      <br/>
-				    
 				      <span><h3>New Task - Personal: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
-				      <br>
-				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 								
 			</div><!-- end columns -->
@@ -200,17 +201,8 @@
 				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
-				      <br/>
-				      <style>
-				      	.zap a {
-				      		margin-left: 2em;
-				      		background: yellow;
-				      	}
-				      </style>
 				      <span><h3>New Task - Groceries: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><br>
-				      <br>
-				       <button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 				</div> <!-- end columns -->
 			</div><!-- end row -->						

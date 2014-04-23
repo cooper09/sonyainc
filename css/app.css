@@ -2458,7 +2458,7 @@ input[type="url"],
 textarea {
   background-color: #f2f2f2;
   font-family: inherit;
-  border: 0px solid #cccccc;
+  border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.75);
