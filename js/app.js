@@ -12,7 +12,7 @@ $("#contactForm .button").click(function(e){
          input_email = $('#contactForm input[name="email"]').val(),
          input_message = $('#contactForm textarea[name="message"]').val();
 
-     $.post('http://zyadsherif.com/wp-content/themes/zyadsherif/send_mail.php', {name: input_name , email: input_email, message: input_message, test: input_test}, function(data) {
+     $.post('ht', {name: input_name , email: input_email, message: input_message, test: input_test}, function(data) {
         var form = $('#contactForm');
         $('#respond').addClass('validate');
         setTimeout(function() {
@@ -173,15 +173,15 @@ controllers.controller('DataCtrl', function ($scope, $http) {
    $scope.response = null;
 
 
-    $http.jsonp('http://sonyainc.net/todo/php/get_sql_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
-        $scope.data = data;
-        $scope.status = status;
+    $http.jsonp('http://sonyainc.net/todo/php/get_work_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.work.data = data;
+        $scope.work.status = status;
 
-        $scope.total = data.length;
+        $scope.work.total = data.length;
     }).
       error(function(data, status) {
-        $scope.data = data || "Request failed";
-        $scope.status = status;
+        $scope.work.data = data || "Request failed";
+        $scope.work.status = status;
     });
    
    
