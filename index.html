@@ -150,10 +150,10 @@
 				<div class="columns large-9 small-12 add-padding" >
 				  <div ng-controller="DataCtrl" class="cover1">
 
-				        <p>Total Todos: {{total}}<p>
+				        <p>Total Work Todos: {{workTotal}}<p>
 
-				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
-				            <span>id: {{work.task.id}} <a href="" ng-click="deleteData(work.task.id)">task: {{work.task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
+				         <li ng-repeat="task in workData" ng-class="{strike: deleted}">  
+				            <span>id: {{task.id}} <a href="" ng-click="deleteData(work.task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 
 				      <span><h3>New Task - Work </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
@@ -175,9 +175,9 @@
 			<div class="columns large-9 small-12 add-padding" >
 				  <div ng-controller="DataCtrl"  class="cover2">
 
-				        <p>Total Todos: {{total}}<p>
+				        <p>Total Personal Todos: {{myTotal}}<p>
 
-				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
+				         <li ng-repeat="task in myData" ng-class="{strike: deleted}">  
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <span><h3>New Task - Personal: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
@@ -196,9 +196,9 @@
 			<div class="columns large-9 small-12 add-padding" >
 			 <div ng-controller="DataCtrl"  class="cover3">
 
-				        <p>Total Todos: {{total}}<p>
+				        <p>Total Grocery Todos: {{foodTotal}}<p>
 
-				         <li ng-repeat="task in data" ng-class="{strike: deleted}">  
+				         <li ng-repeat="task in foodData" ng-class="{strike: deleted}">  
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <span><h3>New Task - Groceries: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>

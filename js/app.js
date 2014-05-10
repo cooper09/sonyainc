@@ -174,16 +174,34 @@ controllers.controller('DataCtrl', function ($scope, $http) {
 
 
     $http.jsonp('http://sonyainc.net/todo/php/get_work_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
-        $scope.work.data = data;
-        $scope.work.status = status;
-
-        $scope.work.total = data.length;
+        $scope.workData = data;
+        $scope.workStatus = status;
+        $scope.workTotal = data.length;
     }).
       error(function(data, status) {
-        $scope.work.data = data || "Request failed";
-        $scope.work.status = status;
+        $scope.data = data || "Request failed";
+        $scope.status = status;
     });
    
+    $http.jsonp('http://sonyainc.net/todo/php/get_personal_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.myData = data;
+        $scope.myStatus = status;
+        $scope.myTotal = data.length;
+    }).
+      error(function(data, status) {
+        $scope.data = data || "Request failed";
+        $scope.status = status;
+    });
+
+     $http.jsonp('http://sonyainc.net/todo/php/get_groceries_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.foodData = data;
+        $scope.foodStatus = status;
+        $scope.foodTotal = data.length;
+    }).
+      error(function(data, status) {
+        $scope.data = data || "Request failed";
+        $scope.status = status;
+    });
    
     $scope.getData = function() {
        // alert("get data: "+ $scope.data[0].task );
