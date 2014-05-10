@@ -173,7 +173,7 @@ controllers.controller('DataCtrl', function ($scope, $http) {
    $scope.response = null;
 
 
-    $http.jsonp('http://sonyainc.net/todo/php/get_work_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+    $http.jsonp('http://sonyainc.net/services/todo/get_work_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
         $scope.workData = data;
         $scope.workStatus = status;
         $scope.workTotal = data.length;
@@ -183,7 +183,7 @@ controllers.controller('DataCtrl', function ($scope, $http) {
         $scope.status = status;
     });
    
-    $http.jsonp('http://sonyainc.net/todo/php/get_personal_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+    $http.jsonp('http://sonyainc.net/services/todo/get_personal_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
         $scope.myData = data;
         $scope.myStatus = status;
         $scope.myTotal = data.length;
@@ -193,7 +193,7 @@ controllers.controller('DataCtrl', function ($scope, $http) {
         $scope.status = status;
     });
 
-     $http.jsonp('http://sonyainc.net/todo/php/get_groceries_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+     $http.jsonp('http://sonyainc.net/services/todo/get_groceries_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
         $scope.foodData = data;
         $scope.foodStatus = status;
         $scope.foodTotal = data.length;
@@ -204,13 +204,42 @@ controllers.controller('DataCtrl', function ($scope, $http) {
     });
    
     $scope.getData = function() {
-       // alert("get data: "+ $scope.data[0].task );
+        $http.jsonp('http://sonyainc.net/services/todo/get_work_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.workData = data;
+        $scope.workStatus = status;
+        $scope.workTotal = data.length;
+    }).
+      error(function(data, status) {
+        $scope.data = data || "Request failed";
+        $scope.status = status;
+    });
+   
+    $http.jsonp('http://sonyainc.net/services/todo/get_personal_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.myData = data;
+        $scope.myStatus = status;
+        $scope.myTotal = data.length;
+    }).
+      error(function(data, status) {
+        $scope.data = data || "Request failed";
+        $scope.status = status;
+    });
+
+     $http.jsonp('http://sonyainc.net/services/todo/get_groceries_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $scope.foodData = data;
+        $scope.foodStatus = status;
+        $scope.foodTotal = data.length;
+    }).
+      error(function(data, status) {
+        $scope.data = data || "Request failed";
+        $scope.status = status;
+    });
+   
       }
       
-      $scope.putData = function(taskname) {
+      $scope.putWorkData = function(taskname) {
         $scope.newTask = '';
 
-          $http.jsonp("http://sonyainc.net/todo/php/put_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
+          $http.jsonp("http://sonyainc.net/services/todo/put_work_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
             $scope.data = data;
             $scope.status = status;
             $scope.watch();
@@ -221,9 +250,36 @@ controllers.controller('DataCtrl', function ($scope, $http) {
         });
       }
 
+      $scope.putPersonalData = function(taskname) {
+        $scope.newTask = '';
+
+          $http.jsonp("http://sonyainc.net/services/todo/put_my_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
+            $scope.data = data;
+            $scope.status = status;
+            $scope.watch();
+        }).
+          error(function(data, status) {
+            $scope.data = data || "Put Request failed";
+            $scope.status = status;
+        });
+      }
+
+      $scope.putFoodData = function(taskname) {
+        $scope.newTask = '';
+
+          $http.jsonp("http://sonyainc.net/services/todo/put_grocery_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
+            $scope.data = data;
+            $scope.status = status;
+            $scope.watch();
+        }).
+          error(function(data, status) {
+            $scope.data = data || "Put Request failed";
+            $scope.status = status;
+        });
+      }
 
       $scope.deleteData = function(taskId) {
-         $http.jsonp('http://sonyainc.net/todo/php/delete_item.php?taskid='+taskId +'&format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+         $http.jsonp('http://sonyainc.net/services/todo/delete_item.php?taskid='+taskId +'&format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
             $scope.data = data;
             $scope.status = status;
             $scope.watch(); 
@@ -236,7 +292,7 @@ controllers.controller('DataCtrl', function ($scope, $http) {
       }
 
       $scope.refresh = function() {
-        $http.jsonp('http://sonyainc.net/todo/php/get_sql_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
+        $http.jsonp('http://sonyainc.net/services/todo/get_sql_data.php?format=jsonp&callback=JSON_CALLBACK').success(function(data, status) {
         $scope.data = data;
         $scope.status = status;
          $scope.newTask = '';

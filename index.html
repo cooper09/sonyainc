@@ -103,6 +103,14 @@
 	#addbtn {
 		margin-right: 1em;
 	}
+
+	.inputbox {
+		background: pink;
+		margin-left: 1em;
+	}
+	.deletethingy {
+		font-size: 2em;
+	}
 </style>
 </head>
 
@@ -157,7 +165,7 @@
 				        </li>
 
 				      <span><h3>New Task - Work </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putWorkData(newTask)">Add</button><button id="refreshbtn" ng-click="getData()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 								
 					
@@ -181,7 +189,7 @@
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <span><h3>New Task - Personal: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putPersonalData(newTask)">Add</button><button id="refreshbtn" ng-click="getData()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 								
 			</div><!-- end columns -->
@@ -202,7 +210,7 @@
 				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 				      <span><h3>New Task - Groceries: </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>
-				        <button id="addbtn" ng-click="putData(newTask)">Add</button><button id="refreshbtn" ng-click="refresh()" ng-init="count=0">Refresh</button>
+				        <button id="addbtn" ng-click="putFoodData(newTask)">Add</button><button id="refreshbtn" ng-click="getData()" ng-init="count=0">Refresh</button>
 				   </div><!-- end DataCtrl -->
 				</div> <!-- end columns -->
 			</div><!-- end row -->						

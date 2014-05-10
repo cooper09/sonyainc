@@ -1699,6 +1699,8 @@ a {
   color: *#0ca7d3; 
   text-decoration: none;
   line-height: inherit;
+  font-size: 2em;
+  margin-left: 1em;
 }
 a:hover, a:focus {
   color: #0b94bb;
@@ -2515,7 +2517,10 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 1.25em 0;
+  margin: 0 0 1.25em 2em;
+  width: 1em;
+  height: 1em;
+  background: red;
 }
 
 /* Normalize file input width */
