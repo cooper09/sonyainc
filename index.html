@@ -105,11 +105,14 @@
 	}
 
 	.inputbox {
-		background: pink;
 		margin-left: 1em;
 	}
 	.deletethingy {
-		font-size: 2em;
+		font-size: 1.2em;
+	}
+	a {
+	  font-size: 1.4em;
+	  margin-left: 1em;
 	}
 </style>
 </head>
@@ -161,7 +164,7 @@
 				        <p>Total Work Todos: {{workTotal}}<p>
 
 				         <li ng-repeat="task in workData" ng-class="{strike: deleted}">  
-				            <span>id: {{task.id}} <a href="" ng-click="deleteData(work.task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
+				            <span>id: {{task.id}} <a href="" ng-click="deleteData(task.id)">task: {{task.task}}</a></span><span><input type="checkbox" ng-model="deleted" class="inputbox"> <span class="deletethingy">delete<br></span>
 				        </li>
 
 				      <span><h3>New Task - Work </h3></span><input type="text" ng-model='newTask' class="input zap"><br/>

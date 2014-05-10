@@ -1696,10 +1696,10 @@ td {
 
 /* Default Link Styles */
 a {
-  color: *#0ca7d3; 
+  color: #0ca7d3; 
   text-decoration: none;
   line-height: inherit;
-  font-size: 2em;
+  font-size: 1.4em;
   margin-left: 1em;
 }
 a:hover, a:focus {
@@ -2520,7 +2520,6 @@ select {
   margin: 0 0 1.25em 2em;
   width: 1em;
   height: 1em;
-  background: red;
 }
 
 /* Normalize file input width */
