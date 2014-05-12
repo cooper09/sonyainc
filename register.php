@@ -27,12 +27,9 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script src="respond.min.js"></script>
 </head>
 <body>
+	<?php
 
-<?php
-
-echo "Do your stuff!<br/>";
-
-		if (isset($_POST['firstname']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['password'])) {
+		if (isset($_POST['firstname']) && isset($_POST['password'])) {
 			// The form has been submitted, so let's create the account in the database
 			
 			$firstname = $_POST['firstname'];
@@ -45,12 +42,13 @@ echo "Do your stuff!<br/>";
 		$dbh=mysql_connect ("localhost", "root","root") or die('Cannot connect to the database because: ' . mysql_error());
 mysql_select_db ("testDB"); 
 		
-		$insert_sql = "INSERT INTO testTBL (field1, field2, field3, field4 ) VALUES( '$firstname', '$surname', '$email', '$password')";
-
-			
-	 mysql_query($insert_sql) or die(mysql_error());
+		$insert_sql = "INSERT INTO testTable (first, last, email, password ) VALUES( '$firstname','$surname','$email', '$password')";
+		
+	 $result = mysql_query($insert_sql) or die('sql error: ' .mysql_error());
 	 
-	 mysql_close($dbh);			
+	 mysql_close($dbh);	
+
+	 echo("results: " . $result );		
 		
 		} else {
 		?>	
@@ -71,8 +69,6 @@ mysql_select_db ("testDB");
 			<label>&nbsp; <input type="submit" value="Register" /></label>
 		</form>
 	<?php } ?>
-    
-    <p>TEST</p>
     <p>&nbsp;</p>
   </div>
 </div>
