@@ -254,6 +254,7 @@ controllers.controller('DataCtrl', function ($scope, $http) {
         $scope.newTask = '';
 
           $http.jsonp("http://sonyainc.net/services/todo/put_my_item.php?task="+taskname+"&format=jsonp&callback=JSON_CALLBACK").success(function(data, status) {
+            alert("putting personal data")
             $scope.data = data;
             $scope.status = status;
             $scope.watch();
